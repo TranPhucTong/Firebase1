@@ -90,8 +90,7 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (!task.isSuccessful()) {
-                    Toast.makeText(MainActivity3.this, "Authentication failed." + task.getException(),
-                            Toast.LENGTH_SHORT).show();
+
                 } else {
                     UserHappyDatabase database1 = Room.databaseBuilder(MainActivity3.this, UserHappyDatabase.class, "mydb")
                             .allowMainThreadQueries()
