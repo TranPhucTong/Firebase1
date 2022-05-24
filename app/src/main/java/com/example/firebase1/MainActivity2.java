@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity2 extends AppCompatActivity {
     private EditText emailedit, passedit;
     private Button btnLogin;
+    private TextView txt2;
     private FirebaseAuth mAuth;
 
     @Override
@@ -32,6 +34,7 @@ public class MainActivity2 extends AppCompatActivity {
         emailedit = findViewById(R.id.email);
         passedit = findViewById(R.id.password);
         btnLogin = findViewById(R.id.btnLogin);
+        txt2 = findViewById(R.id.textView2);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +42,16 @@ public class MainActivity2 extends AppCompatActivity {
                 login();
             }
         });
+
+        txt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity2.this, MainActivity3.class));
+
+            }
+        });
     }
+
 
     private void login() {
         String email, pass;
@@ -62,6 +74,7 @@ public class MainActivity2 extends AppCompatActivity {
                 if(task.isSuccessful()){
                     Toast.makeText(getApplicationContext(),"Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity2.this, MainActivity4.class);
+                    intent.putExtra("email", email);
                     startActivity(intent);
                 }else{
                     Toast.makeText(getApplicationContext(), "Đăng nhập không thành công", Toast.LENGTH_SHORT).show();

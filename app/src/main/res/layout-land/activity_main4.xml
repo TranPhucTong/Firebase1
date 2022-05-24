@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/imageView13"
         android:layout_width="110dp"
         android:layout_height="107dp"
         android:layout_marginStart="81dp"
@@ -34,7 +34,7 @@
         app:srcCompat="@drawable/group_3__1_" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/imageView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="134dp"
@@ -46,14 +46,14 @@
         app:srcCompat="@drawable/group_4__2_" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/imageView15"
         android:layout_width="109dp"
         android:layout_height="113dp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="108dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView10"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintEnd_toStartOf="@+id/imageView14"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         app:srcCompat="@drawable/group_5" />
 
@@ -71,7 +71,8 @@
         android:layout_width="297dp"
         android:layout_height="56dp"
         android:layout_marginBottom="60dp"
-        android:backgroundTint="#EF77B0"
+        app:backgroundTint="@null"
+        android:background="@drawable/boder_pink"
         android:text="FINISH"
         android:textSize="18sp"
         android:textStyle="bold"
